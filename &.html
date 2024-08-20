@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>LISTA</title>
+    <link rel="stylesheet" href="HomeStyleSheet.css">
+</head>
+<body>
+    <h1>Lista de Itens</h1>
+    <div class="box-area">
+        <input type="text" id="titulo" placeholder="Título" />
+        <input type="text" id="descricao" placeholder="Descrição" />
+        <input type="url" id="imagem" placeholder="URL da Imagem" />
+        <button onclick="addItem()">Adicionar Item</button>
+    </div>
+    <ul id="itemLista"></ul>
+    <script>
+    function addItem() {
+        
+        const titulo = document.getElementById('titulo').value;
+        const descricao = document.getElementById('descricao').value;
+        const imageUrl = document.getElementById('imagem').value;
+    
+    
+    
+        const li = document.createElement('li');
+    
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        img.alt = titulo;
+    
+        const content = document.createElement('div');
+        content.innerHTML = `<strong>${titulo}</strong><p>${descricao}</p>`;
+    
+    
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remover';
+        removeButton.className = 'remove';
+        removeButton.onclick = function() {
+            li.remove();
+        };
+    
+        li.appendChild(img);
+        li.appendChild(content);
+        li.appendChild(removeButton);
+    
+        document.getElementById('itemLista').appendChild(li);
+    
+        document.getElementById('titulo').value = '';
+        document.getElementById('descricao').value = '';
+        document.getElementById('imagem').value = '';
+    }</script>
+     <footer>&copy; Copyright <strong><span>Ester Gomides</span></strong></footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:'Trebuchet MS';
+    text-align: center;
+}
+.wrapper{
+    width:70%;
+    margin:0 auto;
+    font-size: 20px;
+}
+header{
+    width:100%;
+    height:100px;
+    background-color:#000000 ;
+    position: fixed;
+    z-index:4;/* Camada overlay 1*/
+}
+.logo{
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+}
+.TXT{
+    text-decoration: none;
+    font-size: 50px;/*Tamanho da fonte logo*/
+    font-family: 'Arial Black';
+    color: #cfcec5;
+    letter-spacing: 0px;
+    text-align: center;
+    float: center;
+}
+nav{
+    float:right;
+    line-height: 100px;
+}
+nav a{
+    text-decoration: none;
+    font-family: 'Trebuchet MS';/*Txt navegacao*/
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 36px 10px;
+    margin: 0 1px;
+    font-weight: 500;
+}
+nav a:hover{
+    background: #bfbfbf;
+    color: #842519;
+    transition-duration: 0.4s ;
+}
+.banner-area{
+    background-image: url();
+    background-size: cover;
+    background-position: center center;
+    top: 1px;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+.banner-area::after{
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    opacity: .7;
+    z-index: -1;
+}
+.content-area{
+    width: 70%;
+    border-radius: 25px;
+    margin: auto;
+    height: 100px;
+    position: relative;
+    background-color: #ffffff;
+    top: 140px;
+    z-index: 3;
+}
+.back{
+    z-index: 1;
+    border-radius: 25px;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    background-color: #808080;
+    top: 550px;
+}
+.content-area h2{
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+    letter-spacing: 4px;
+}
+
+.content-area p{
+    padding: 2% 0;
+    line-height: 25px;
+    text-align: justify;
+}
+input {
+        margin: 5px;
+        padding: 10px;
+        width: 300px;
+ }
+    
+button {
+        padding: 10px 20px;
+        font-size: 16px;
+ }
+    
+ul {
+        list-style-type: none;
+        padding: 0;
+}
+    
+li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+}
+    
+img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 10px;
+}
+    
+button.remove {
+        margin-left: auto;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: #f44;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+}
+    
+button.remove:hover {
+        background-color: #d33;
+}
